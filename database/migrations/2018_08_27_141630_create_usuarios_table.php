@@ -17,6 +17,7 @@ class CreateUsuariosTable extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->string('email');
+            $table->integer('votos');
             $table->timestamps();
         });
     }

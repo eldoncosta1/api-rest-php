@@ -11,6 +11,23 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+         $this->call(UsuariosSeeder::class);
     }
+}
+
+
+class UsuariosSeeder extends Seeder
+{
+	public function run()
+	{
+		DB::insert('INSERT INTO usuarios
+					(nome, email, votos) VALUES(?, ?, ?)',
+				   array('Eldon','eldoncosta1@gmail.com', '10'));
+
+		DB::insert('INSERT INTO usuarios
+					(nome, email, votos) VALUES(?, ?, ?)',
+				   array('Bruna','bruna@gmail.com', '20'));
+
+		
+	}
 }
